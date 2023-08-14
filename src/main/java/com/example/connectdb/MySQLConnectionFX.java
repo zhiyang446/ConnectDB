@@ -35,10 +35,12 @@ public class MySQLConnectionFX extends Application {
     }
 
     public Connection getConnection() {
+
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            Class.forName("com.mysql.jdbc.Driver");
             return DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/testing", "root", "zhiyang446");
+                    "jdbc:mysql://localhost/testing", "root", "");
         } catch (Exception e) {
             e.printStackTrace();
             return null;
